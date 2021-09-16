@@ -56,7 +56,8 @@ echo "================================================"
       echo "apt-get update"
       apt-get update
       echo "apt-get upgrade -y"
-      apt-get upgrade -y 
+      apt-get upgrade -y
+      apt --fix-broken install
       sleep 2
 echo "================================================"
 ;;
