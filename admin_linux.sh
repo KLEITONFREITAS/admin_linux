@@ -81,7 +81,7 @@ echo "================================================"
  ;;
     7)
       echo " Instalação dos Apps Defauls PUGA Studios ..." 
-      srm /etc/apt/preferences.d/nosnap.pref
+      rm /etc/apt/preferences.d/nosnap.pref
       apt update
       apt install snapd
       snap install slack --classic
