@@ -85,6 +85,7 @@ echo "================================================"
       #apt update
       #apt install snapd
       #snap install slack --classic
+      apt install numlockx
       wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
       dpkg -i discord.deb
       wget -q -O - https://dl.google.com/linux/direct/google-chrome-stable-current_amd64.deb
