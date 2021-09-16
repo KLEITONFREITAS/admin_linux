@@ -88,7 +88,7 @@ echo "================================================"
       apt install numlockx
       wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
       dpkg -i discord.deb
-      wget -q -O - https://dl.google.com/linux/direct/google-chrome-stable-current_amd64.deb
+      wget -q -O - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
       dpkg -i  google-stable-current_amd64.deb    
       sleep 5
 echo "================================================"
