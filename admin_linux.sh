@@ -81,16 +81,14 @@ echo "================================================"
  ;;
     7)
       echo " Instalação dos Apps Defauls PUGA Studios ..." 
-      rm /etc/apt/preferences.d/nosnap.pref
-      apt update
-      apt install snapd
-      snap install slack --classic
+      #rm /etc/apt/preferences.d/nosnap.pref
+      #apt update
+      #apt install snapd
+      #snap install slack --classic
       wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
       dpkg -i discord.deb
-      sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-      wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
-      apt-get update
-      apt-get install google-chrome-stable -y
+      wget -q -O - https://dl.google.com/linux/direct/google-chrome-stable-current_amd64.deb
+      dpkg -i  google-stable-current_amd64.deb    
       sleep 5
 echo "================================================"
 ;;
