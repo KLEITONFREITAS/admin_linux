@@ -35,7 +35,6 @@ echo "================================================"
 
 case "$x" in
 
-
     1)
       echo " Informe o nome do pacote para ser instalado?"
       read nome
