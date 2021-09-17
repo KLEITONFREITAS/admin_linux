@@ -12,7 +12,7 @@ echo " 1) Instalar um programa"
 echo ""
 echo " 2) Remover um programa"
 echo ""
-echo " 3) Atualizar o sitema"
+echo " 3) Atualizar o sistema"
 echo ""
 echo " 4) Instalar dependências"
 echo ""
@@ -38,7 +38,7 @@ case "$x" in
     1)
       echo " Informe o nome do pacote para ser instalado?"
       read nome
-      apt-get install $nome
+      apt install $nome -y
       sleep 2
 
 echo "================================================"
@@ -80,7 +80,7 @@ echo "================================================"
 echo "================================================"
  ;;
     7)
-      echo " Instalação dos Apps Defauls PUGA Studios ..." 
+      echo " Instalação dos Apps Defaults PUGA Studios ..." 
       #rm /etc/apt/preferences.d/nosnap.pref
       #apt update
       #apt install snapd
@@ -88,7 +88,7 @@ echo "================================================"
       apt install numlockx grub-customizer vim -y
       wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
       dpkg -i discord.deb
-      wget -q -O - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
       dpkg -i  google-stable_current_amd64.deb    
       sleep 5
 echo "================================================"
