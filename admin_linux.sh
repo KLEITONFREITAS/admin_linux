@@ -60,7 +60,7 @@ echo "================================================"
        echo " Iniciando a correção de erros de dependias e pacotes."
        apt clean all
        apt autoremove -y
-       apt-f install
+       apt -f install -y
        apt --fix-broken install
        dpkg --configure -a       
        sleep 2
