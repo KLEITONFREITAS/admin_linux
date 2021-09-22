@@ -6,21 +6,17 @@ while true $x != "teste"
 do
 clear
 echo "================================================"
-echo " ### Administração básica Linux ### "
+echo " ### Administração Básica Linux ### "
 echo ""
-echo " 1) Instalar um programa"
+echo " 1) Instalar um Programa"
 echo ""
-echo " 2) Remover um programa"
+echo " 2) Remover um Programa"
 echo ""
-echo " 3) Atualizar o sistema"
+echo " 3) Atualizar o Sistema"
 echo ""
-echo " 4) Instalar dependências"
+echo " 4) Instalar dependências e correções de erros"
 echo ""
-echo " 5) Limpando programas defeituosos "
-echo ""
-echo " 6) Corrigir erros"
-echo ""
-echo " 7) Apps Default PUGA Studios"
+echo " 5) Apps Default PUGA Studios"
 echo ""
 echo " 8) Sobre"
 echo ""
@@ -61,25 +57,16 @@ echo "================================================"
 echo "================================================"
 ;;
     4)
-       echo " Iniciando o processo..."
-       apt-get -f install
+       echo " Iniciando a correção de erros de dependias e pacotes."
+       apt clean all
+       apt autoremove
+       apt-f install
+       apt --fix-broken install
+       dpkg --configure -a       
        sleep 2
-echo "================================================"
-;;
-     5)
-       echo " Corrigindo erros..."
-       apt-get autoremove
-       sleep 2
-echo "================================================"
-;;
-    6)
-      echo " Reparando..."
-      dpkg --configure -a
-      sleep 2
-
 echo "================================================"
  ;;
-    7)
+    5)
       echo " Instalação dos Apps Defaults PUGA Studios ..." 
       #rm /etc/apt/preferences.d/nosnap.pref
       #apt update
@@ -88,14 +75,16 @@ echo "================================================"
       apt install numlockx grub-customizer vim -y
       wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
       dpkg -i discord.deb
+      apt install -f -y
+      dpkg --configure -a
       wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      dpkg -i  google-stable_current_amd64.deb    
+      dpkg -i  google-chrome-stable_current_amd64.deb    
       sleep 5
 echo "================================================"
 ;;
- 8)
-      echo " Sobre ..." 
-      sleep 5 
+   8)
+     echo " Sobre ..." 
+     sleep 5 
 echo "================================================"
 ;;
 
