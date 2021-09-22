@@ -49,9 +49,9 @@ echo "================================================"
    3)
       echo " Atualizando os repositóriosdo  sistema..."
       echo "apt-get update"
-      apt-get update
+      apt update
       echo "apt-get upgrade -y"
-      apt-get upgrade -y
+      apt upgrade -y
       apt --fix-broken install
       sleep 2
 echo "================================================"
@@ -59,7 +59,7 @@ echo "================================================"
     4)
        echo " Iniciando a correção de erros de dependias e pacotes."
        apt clean all
-       apt autoremove
+       apt autoremove -y
        apt-f install
        apt --fix-broken install
        dpkg --configure -a       
